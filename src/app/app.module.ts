@@ -12,15 +12,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';;
-import { HeaderComponent } from './header/header.component'
-;
-import { FooterComponent } from './footer/footer.component'
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { RegisterComponent } from './register/register.component'
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        
     ],
     declarations: [
         AppComponent,
@@ -28,13 +29,14 @@ import { FooterComponent } from './footer/footer.component'
         LoginComponent
 ,
         HeaderComponent ,
-        FooterComponent   ],
+        FooterComponent ,
+        RegisterComponent  ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        fakeBackendProvider
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
