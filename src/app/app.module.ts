@@ -15,6 +15,12 @@ import { LoginComponent } from './login';;
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component'
+;
+import { IfRolesDirective } from './if-roles.directive'
+;
+import { AppheaderComponent } from './admin/appheader/appheader.component'
+;
+import { AppfooterComponent } from './admin/appfooter/appfooter.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -26,11 +32,15 @@ import { RegisterComponent } from './register/register.component'
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent
-,
+        LoginComponent,
         HeaderComponent ,
         FooterComponent ,
-        RegisterComponent  ],
+        RegisterComponent ,
+        IfRolesDirective ,
+        AppheaderComponent,
+        AppfooterComponent,
+    ],
+      
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

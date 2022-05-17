@@ -1,6 +1,8 @@
-﻿<app-header></app-header>
+﻿<app-header *appHasRole="'candidate'"></app-header>
+<app-appheader *appHasRole="'admin'"></app-appheader>
 
-<router-outlet></router-outlet>
+<!-- <router-outlet ></router-outlet> -->
 
+<app-footer  *appHasRole="'candidate'"></app-footer>
+<app-appfooter  *appHasRole="'admin'"></app-appfooter>
 
-<app-footer></app-footer>
