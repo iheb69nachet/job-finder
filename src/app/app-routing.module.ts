@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
@@ -10,6 +12,10 @@ const routes: Routes = [
     { path: '', component: HomeComponent},
 
     { path: 'login', component: LoginComponent },
+    { path: 'admin', component: DashboardComponent,canActivate:[AuthGuard],children:[
+        { path: 'home', component: AdminhomeComponent}
+    ] },
+
     { path: 'register', component: RegisterComponent },
 
 

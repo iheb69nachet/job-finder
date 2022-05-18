@@ -5,5 +5,6 @@
     firstName: string;
     lastName: string;
     token?: string;
-    role?:String
+    role?:String;
+    email?:string
 }

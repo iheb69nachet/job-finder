@@ -19,4 +19,7 @@ export class AppComponent {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
     }
+    hasRoute(route: string) {
+        return this.router.url.includes(route);
+      }
 }

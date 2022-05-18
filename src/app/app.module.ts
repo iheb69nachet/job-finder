@@ -21,6 +21,14 @@ import { IfRolesDirective } from './if-roles.directive'
 import { AppheaderComponent } from './admin/appheader/appheader.component'
 ;
 import { AppfooterComponent } from './admin/appfooter/appfooter.component'
+;
+import { DashboardComponent } from './admin/dashboard/dashboard.component'
+;
+import { SidebarComponent } from './admin/sidebar/sidebar.component'
+;
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component'
+
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -39,7 +47,10 @@ import { AppfooterComponent } from './admin/appfooter/appfooter.component'
         IfRolesDirective ,
         AppheaderComponent,
         AppfooterComponent,
-    ],
+        DashboardComponent
+,
+        SidebarComponent ,
+        AdminhomeComponent   ],
       
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

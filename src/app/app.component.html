@@ -1,8 +1,6 @@
-﻿<app-header *appHasRole="'candidate'"></app-header>
-<app-appheader *appHasRole="'admin'"></app-appheader>
+﻿<app-header ></app-header>
 
-<!-- <router-outlet ></router-outlet> -->
+<router-outlet ></router-outlet>
 
-<app-footer  *appHasRole="'candidate'"></app-footer>
-<app-appfooter  *appHasRole="'admin'"></app-appfooter>
+<app-footer *ngIf="!hasRoute('admin')"></app-footer>
 

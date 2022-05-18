@@ -23,10 +23,17 @@ export class IfRolesDirective implements OnInit, OnDestroy {
     this.subscription.push(
     
     this.authenticationService.currentUser.subscribe(res => {
-      const role =res.role
+      if(!res){
+        if(this.appHasRole=="public"){
+          this.viewContainerRef.createEmbeddedView(this.templateRef)
+        }
+      }else{
+        const role =res.role
       
 
-      role!=this.appHasRole?this.viewContainerRef.clear(): this.viewContainerRef.createEmbeddedView(this.templateRef);
+        role!=this.appHasRole?this.viewContainerRef.clear(): this.viewContainerRef.createEmbeddedView(this.templateRef);
+      }
+      
    
       })
     );
