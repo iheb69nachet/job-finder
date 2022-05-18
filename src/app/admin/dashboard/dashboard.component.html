@@ -16,12 +16,14 @@
 <div class="container-scroller">
    
   <app-appheader></app-appheader>
-    <div class="container-fluid page-body-wrapper">
+    <div class="container-fluid page-body-wrapper" >
         <app-sidebar></app-sidebar>
       <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <router-outlet ></router-outlet>
+      <div class="main-panel" >
+        <div class="content-wrapper" >
+          <div class="row">
+            <router-outlet></router-outlet>
+          </div>
         </div>
         <!-- content-wrapper ends -->
         <app-appfooter></app-appfooter>
