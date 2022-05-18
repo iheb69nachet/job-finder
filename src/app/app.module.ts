@@ -27,7 +27,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component'
 import { SidebarComponent } from './admin/sidebar/sidebar.component'
 ;
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component'
-
+;
+import { ListCandidatesComponent } from './admin/list-candidates/list-candidates.component'
 
 @NgModule({
     imports: [
@@ -50,7 +51,8 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component'
         DashboardComponent
 ,
         SidebarComponent ,
-        AdminhomeComponent   ],
+        AdminhomeComponent ,
+        ListCandidatesComponent  ],
       
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
