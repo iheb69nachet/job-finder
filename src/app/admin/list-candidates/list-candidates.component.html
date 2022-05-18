@@ -1,80 +1,85 @@
 <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Profile</th>
-          <th>VatNo.</th>
-          <th>Created</th>
-          <th>Status</th>
-          <th>Status</th>
-          <th>Status</th>
-          <th>Status</th>
-          <th>Status</th>
-          <th>Status</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jacob</td>
-          <td>53275531</td>
-          <td>12 May 2017</td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
+<table class="table table-striped ">
+    <thead>
+      <tr>
+        <th>
+          User
+        </th>
+        <th>
+          First name
+        </th>
+        <th>
+          Last name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Username
+        </th>
+        <th>
+          birthdate
+        </th>
+        <th>
+          Phone
+        </th>
+        <th>
+          Adress
+        </th>
+        <th>
+          Diploma
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <td class="py-1">
+          <img  src="{{candidate.image}}" onerror="this.src='/assets/admin/images/faces/face1.jpg'" alt="image"/>
+        </td>
+        <td>
+         {{candidate.firstName || "-"}}
+        </td>
+        <td>
+          {{candidate.lastName || "-"}}
 
-        </tr>
-        <tr>
-          <td>Messsy</td>
-          <td>53275532</td>
-          <td>15 May 2017</td>
-          <td><label class="badge badge-warning">In progress</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
+        </td>
+        <td>
+          {{candidate.email || "-"}}
 
-        </tr>
-        <tr>
-          <td>John</td>
-          <td>53275533</td>
-          <td>14 May 2017</td>
-          <td><label class="badge badge-info">Fixed</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
+        </td>
+        <td>
+          {{candidate.Username || "-"}}
 
-        </tr>
-        <tr>
-          <td>Peter</td>
-          <td>53275534</td>
-          <td>16 May 2017</td>
-          <td><label class="badge badge-success">Completed</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
+        </td>
+        <td>
+          {{candidate.birthdate || "-"}}
 
-        </tr>
-        <tr>
-          <td>Dave</td>
-          <td>53275535</td>
-          <td>20 May 2017</td>
-          <td><label class="badge badge-warning">In progress</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
-          <td><label class="badge badge-danger">Pending</label></td>
+        </td>
+        <td>
+          {{candidate.phone || "-"}}
 
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        </td>
+        <td>
+          {{candidate.adress || "-"}}
+
+        </td>
+        <td>
+          {{candidate.Diploma || "-"}}
+
+        </td>
+        <td>
+          <button *ngIf="candidate.staus=='active'" type="button" class="btn btn-primary">Enable</button>
+          <button *ngIf="candidate.staus!='active'" type="button" class="btn btn-danger">Disable</button>
+
+        </td>
+       
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
