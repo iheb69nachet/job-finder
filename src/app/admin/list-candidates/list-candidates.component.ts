@@ -16,7 +16,7 @@ export class ListCandidatesComponent implements OnInit {
 
   ngOnInit(): void {
     this.adminService.GetCandidates().subscribe(res=>{
-      console.log(this.candidates)
+      this.candidates=res.data
       
     })
 
