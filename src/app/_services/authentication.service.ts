@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '@environments/environment';
 import { User } from '@app/_models';
+import {JwtHelperService} from '@auth0/angular-jwt';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -12,6 +13,7 @@ export class AuthenticationService {
     public currentUser: Observable<User>;
 
     constructor(private http: HttpClient) {
+        
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
@@ -19,7 +21,18 @@ export class AuthenticationService {
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
     }
+    gOnInit() {
+        // this.currentUser.subscribe(user => 
+        //     {
+        //         if (this.jwtHelper.isTokenExpired(user.token)) 
+        //         {
+        //             this.logout()
+        //         }else{
 
+        //         }
+        //     }
+        //     );
+      }
     login(email: string, password: string) {
         return this.http.post<any>(`${environment.apiUrl}/auth/login`, { email, password })
             .pipe(map(user => {
@@ -31,12 +44,15 @@ export class AuthenticationService {
     }
     register(data:Object){
     return this.http.post(`${environment.apiUrl}/auth/register`,data)
-
     }
+    registerCompany(data:Object){
+        return this.http.post(`${environment.apiUrl}/auth/registerCompany`,data)
+        }
 
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
     }
+    
 }

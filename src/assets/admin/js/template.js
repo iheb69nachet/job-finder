@@ -1,5 +1,6 @@
 (function($) {
   'use strict';
+  if (window.location.href.indexOf("franky") > -1) {
   $(function() {
     var body = $('body');
     var contentWrapper = $('.content-wrapper');
@@ -109,12 +110,7 @@
         }
       }
     });
-    if ($.cookie('staradmin2-free-banner')!="true") {
-      document.querySelector('.navbar').classList.remove('fixed-top');
-    }
-    else {
-      document.querySelector('.navbar').classList.add('fixed-top');
-    }
+  
     
     if ($( ".navbar" ).hasClass( "fixed-top" )) {
       document.querySelector('.page-body-wrapper').classList.remove('pt-0');
@@ -133,5 +129,5 @@
   $('#navbar-search-icon').click(function() {
     $("#navbar-search-input").focus();
   });
-  
+}
 })(jQuery);

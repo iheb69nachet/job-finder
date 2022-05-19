@@ -9,17 +9,32 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   currentUser: User;
+  private roles:Array<string>=["admin","company"]
 
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
 
   ) { 
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.authenticationService.currentUser.subscribe(x => 
+      {
+        this.currentUser = x
+        if(!this.roles.includes(x.role)){
+          alert(x.role);
+          this.router.navigate(['/']);
+        }
+      }
+      );
 
   }
 
   ngOnInit(): void {
+    this.authenticationService.currentUser.subscribe(x => 
+      {
+        this.currentUser = x
+        console.log(x)
+      }
+      );
   }
   logout() {
     this.authenticationService.logout();

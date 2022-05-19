@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
                 data => {
                     console.log(data);
                     
-                    if(data.data.role=="admin"){
+                    if(data.data.role=="admin" || data.data.role=="company"){
                         this.router.navigate(["/admin"]);
 
                     }else{
