@@ -1,1 +1,45 @@
-<p>list works!</p>
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Hoverable Table</h4>
+        <p class="card-description">
+           <code>Job Offers List</code>
+        </p>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+
+
+                <th>Title</th>
+                <th>Description</th>
+                <th>Places Available</th>
+                <th> Qualifications</th>
+                <th> Technologies Required</th>
+                <th> Diploma </th>
+                <th> Job Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let j of jobs">
+                <td>{{j.title}}</td>
+                <td>{{j.description}}</td>
+                <td>{{j.placesAvailable}}</td>
+                <td>{{j.qualifications}}</td>
+                <td>{{j.technologiesReq}}</td>
+                <td>{{j.diplomaReq}}</td>
+                <td class="text-danger">{{j.jobtypes}}<i class="ti-arrow-down"></i></td>
+                <td><label class="badge badge-danger">{{j.status}}</label></td>
+              </tr>
+              
+            
+              
+             
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
