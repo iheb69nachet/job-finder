@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ListCandidatesComponent } from './admin/list-candidates/list-candidates.component';
+import { AddComponent } from './admin/job/add/add.component';
 
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './_helpers';
+import { ListComponent } from './admin/job/list/list.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -15,7 +17,11 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'admin', component: DashboardComponent,canActivate:[AuthGuard],children:[
         { path: 'home', component: AdminhomeComponent},
-        { path: 'Candidates/list', component:ListCandidatesComponent}
+        { path: 'Candidates/list', component:ListCandidatesComponent},
+        { path: 'job/add', component:AddComponent},
+        { path: 'job/list', component:ListComponent},
+
+
 
     ] },
 

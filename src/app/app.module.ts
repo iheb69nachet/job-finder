@@ -29,6 +29,14 @@ import { SidebarComponent } from './admin/sidebar/sidebar.component'
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component'
 ;
 import { ListCandidatesComponent } from './admin/list-candidates/list-candidates.component'
+;
+import { AddComponent } from './admin/job/add/add.component'
+;
+import { ListComponent } from './admin/job/list/list.component'
+
+
+
+
 
 @NgModule({
     imports: [
@@ -52,7 +60,9 @@ import { ListCandidatesComponent } from './admin/list-candidates/list-candidates
 ,
         SidebarComponent ,
         AdminhomeComponent ,
-        ListCandidatesComponent  ],
+        ListCandidatesComponent ,
+        AddComponent ,
+        ListComponent],
       
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -51,8 +51,6 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    console.log(data);
-                    
                     if(data.data.role=="admin" || data.data.role=="company"){
                         this.router.navigate(["/admin"]);
 

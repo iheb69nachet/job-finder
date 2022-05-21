@@ -16,23 +16,18 @@ export class DashboardComponent implements OnInit {
     private router: Router
 
   ) { 
-    this.authenticationService.currentUser.subscribe(x => 
-      {
-        this.currentUser = x
-        if(!this.roles.includes(x.role)){
-          alert(x.role);
-          this.router.navigate(['/']);
-        }
-      }
-      );
+  
 
   }
 
   ngOnInit(): void {
-    this.authenticationService.currentUser.subscribe(x => 
+    this.authenticationService.currentUser.subscribe((x:any) => 
       {
         this.currentUser = x
-        console.log(x)
+
+        if(!this.roles.includes(this.currentUser.role)){
+          this.router.navigate(['/']);
+        }
       }
       );
   }

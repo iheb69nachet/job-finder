@@ -8,8 +8,8 @@
         </a>
       </li>
     
-      <li class="nav-item nav-category">Users</li>
-      <li class="nav-item">
+      <li class="nav-item nav-category" *ngIf="currentUser.role=='admin'">Users</li>
+      <li class="nav-item" *ngIf="currentUser.role=='admin'">
         <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
           <i class="menu-icon mdi mdi-account-circle-outline"></i>
           <span class="menu-title">Users</span>
@@ -19,6 +19,21 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"><a class="nav-link" routerLink="/admin/Candidates/list">List Candidates</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">List Companies</a></li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item nav-category" *ngIf="currentUser.role=='company'">Jobs</li>
+      <li class="nav-item" *ngIf="currentUser.role=='company'">
+        <a class="nav-link" data-bs-toggle="collapse" href="#jobs" aria-expanded="false" aria-controls="jobs">
+          <i class="menu-icon mdi mdi-account-circle-outline"></i>
+          <span class="menu-title">My job offers</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="jobs">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" href="/admin/job/add">Add new job</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/admin/job/list">List Jobs</a></li>
 
           </ul>
         </div>

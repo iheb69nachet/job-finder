@@ -101,7 +101,6 @@ onSubmitComany(){
 
     // stop here if form is invalid
     if (this.registerFormCompany.invalid) {
-      alert('nope')
         return;
     }
     this.loading = true;

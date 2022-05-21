@@ -38,7 +38,7 @@ export class AuthenticationService {
             .pipe(map(user => {
                 localStorage.setItem('currentUser', JSON.stringify(user.data));
                 
-                this.currentUserSubject.next(user);
+                this.currentUserSubject.next(user.data);
                 return user;
             }));
     }
