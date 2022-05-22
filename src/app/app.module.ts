@@ -33,6 +33,10 @@ import { ListCandidatesComponent } from './admin/list-candidates/list-candidates
 import { AddComponent } from './admin/job/add/add.component'
 ;
 import { ListComponent } from './admin/job/list/list.component'
+;
+import { ListCompaniesComponent } from './admin/list-companies/list-companies.component'
+;
+import { ListJobsComponent } from './admin/list-jobs/list-jobs.component'
 
 
 
@@ -62,7 +66,11 @@ import { ListComponent } from './admin/job/list/list.component'
         AdminhomeComponent ,
         ListCandidatesComponent ,
         AddComponent ,
+        ListCompaniesComponent,
+        ListJobsComponent,
         ListComponent],
+       
+        
       
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

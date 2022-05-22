@@ -10,6 +10,8 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './_helpers';
 import { ListComponent } from './admin/job/list/list.component';
+import { ListCompaniesComponent } from './admin/list-companies/list-companies.component';
+import { ListJobsComponent } from './admin/list-jobs/list-jobs.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
     { path: 'admin', component: DashboardComponent,canActivate:[AuthGuard],children:[
         { path: 'home', component: AdminhomeComponent},
         { path: 'Candidates/list', component:ListCandidatesComponent},
+        {path: 'Companies/list',component: ListCompaniesComponent},
+        {path:'offers/list', component:ListJobsComponent},
         { path: 'job/add', component:AddComponent},
         { path: 'job/list', component:ListComponent},
 

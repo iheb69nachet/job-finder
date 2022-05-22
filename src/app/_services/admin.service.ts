@@ -12,4 +12,10 @@ export class AdminService {
   GetCandidates(): Observable<any>{
     return this.http.get(`${environment.apiUrl}/admin/users`)
   }
+  GetCompany():Observable<any>{
+    return this.http.get(`${environment.apiUrl}/admin/companies`)
+  }
+  GetJobs():Observable<any>{
+    return this.http.get(`${environment.apiUrl}/admin/offers`)
+  }
 }

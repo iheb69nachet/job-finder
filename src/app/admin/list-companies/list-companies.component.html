@@ -1,0 +1,92 @@
+<div class="table-responsive">
+
+    <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th>
+              User
+            </th>
+            <th>
+              Company Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Type
+            </th>
+            <th>
+              Created At
+            </th>
+            <th>
+              Phone
+            </th>
+            <th>
+              Company Adress
+            </th>
+            <th>
+              Sector
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of companies">
+            <td class="py-1">
+              <img  src="{{c.image}}" onerror="this.src='/assets/admin/images/faces/face1.jpg'" alt="image"/>
+            </td>
+            <td>
+                {{c.CompanyName}}
+             
+            </td>
+            <td>
+                {{c.email}}
+              
+    
+            </td>
+            <td>
+                {{c.description}}
+             
+    
+            </td>
+            <td>
+                {{c.type}}
+            
+    
+            </td>
+            <td>
+                {{c.creationDate}}
+             
+    
+            </td>
+            <td>
+                {{c.phone}}
+            
+            </td>
+            <td>
+                {{c.CompanyAddress}}
+              
+            </td>
+            <td>
+                {{c.sector}}
+             
+    
+            </td>
+            <td>
+              <button *ngIf="c.staus=='active'" type="button" class="btn btn-primary">Enable</button>
+              <button *ngIf="c.staus!='active'" type="button" class="btn btn-danger">Disable</button>
+    
+            </td>
+           
+          </tr>
+          
+          
+        </tbody>
+      </table>
+    </div>
+    

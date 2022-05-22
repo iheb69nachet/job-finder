@@ -10,19 +10,39 @@
     
       <li class="nav-item nav-category" *ngIf="currentUser.role=='admin'">Users</li>
       <li class="nav-item" *ngIf="currentUser.role=='admin'">
-        <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+        <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false" aria-controls="jobs">
           <i class="menu-icon mdi mdi-account-circle-outline"></i>
           <span class="menu-title">Users</span>
           <i class="menu-arrow"></i>
         </a>
+        
         <div class="collapse" id="users">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" routerLink="/admin/Candidates/list">List Candidates</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">List Companies</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/admin/Candidates/list"> Candidates List</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/Companies/list">Companies List</a></li>
 
           </ul>
         </div>
+        
       </li>
+      <li class="nav-item nav-category" *ngIf="currentUser.role=='admin'">Jobs</li>
+      <li class="nav-item" *ngIf="currentUser.role=='admin'">
+        <a class="nav-link" data-bs-toggle="collapse" href="#offer" aria-expanded="false" aria-controls="jobs">
+          <i class="menu-icon mdi mdi-account-circle-outline"></i>
+          <span class="menu-title">Jobs offers</span>
+          <i class="menu-arrow"></i>
+        </a>
+        
+        <div class="collapse" id="offer">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" routerLink="/admin/offers/list"> Jobs List</a></li>
+           
+
+          </ul>
+        </div>
+        
+      </li>
+   
       <li class="nav-item nav-category" *ngIf="currentUser.role=='company'">Jobs</li>
       <li class="nav-item" *ngIf="currentUser.role=='company'">
         <a class="nav-link" data-bs-toggle="collapse" href="#jobs" aria-expanded="false" aria-controls="jobs">
