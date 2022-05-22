@@ -61,8 +61,7 @@ import { JobDetailComponent } from './job-detail/job-detail.component'
         IfRolesDirective ,
         AppheaderComponent,
         AppfooterComponent,
-        DashboardComponent
-,
+        DashboardComponent,
         SidebarComponent ,
         AdminhomeComponent ,
         ListCandidatesComponent ,
@@ -70,7 +69,6 @@ import { JobDetailComponent } from './job-detail/job-detail.component'
         ListCompaniesComponent,
         ListJobsComponent,
         ListComponent,
-    
         JobDetailComponent,
     
     ],

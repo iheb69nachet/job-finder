@@ -19,6 +19,7 @@
                 <th> Diploma </th>
                 <th> Job Type</th>
                 <th>Status</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -31,6 +32,10 @@
                 <td>{{j.diplomaReq}}</td>
                 <td class="text-danger">{{j.jobtypes}}<i class="ti-arrow-down"></i></td>
                 <td><label class="badge badge-danger">{{j.status}}</label></td>
+                <td>
+                      <button (click)="delete(j._id)">Delete </button>
+                
+                 </td>
               </tr>
               
             

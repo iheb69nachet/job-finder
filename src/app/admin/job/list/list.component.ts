@@ -22,5 +22,10 @@ export class ListComponent implements OnInit {
             
         });
   }
+  delete(id:any){
+    this.jobService.deletejobs(id).subscribe(()=>
+    window.location.reload()
+   )
+  }
 
 }

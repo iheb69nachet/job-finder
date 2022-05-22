@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,11 @@ export class JobServiceService {
   ApproveJob(){
     return this.http.get(`${environment.apiUrl}/auth/register`)
 
+  }
+  getJobById(id:any){
+    return this.http.get(`${environment.apiUrl}/detail/`+id)
+  }
+  deletejobs(id:any){
+    return this.http.delete(`${environment.apiUrl}/deletejob/`+id)
   }
 }
