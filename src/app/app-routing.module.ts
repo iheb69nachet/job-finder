@@ -12,6 +12,7 @@ import { AuthGuard } from './_helpers';
 import { ListComponent } from './admin/job/list/list.component';
 import { ListCompaniesComponent } from './admin/list-companies/list-companies.component';
 import { ListJobsComponent } from './admin/list-jobs/list-jobs.component';
+import { JobDetailComponent } from './job-detail/job-detail.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -28,6 +29,10 @@ const routes: Routes = [
 
 
     ] },
+    { path: 'job/:id', component: JobDetailComponent },
+
+
+    
 
     { path: 'register', component: RegisterComponent },
 

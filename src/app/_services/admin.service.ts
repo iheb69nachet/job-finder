@@ -18,4 +18,12 @@ export class AdminService {
   GetJobs():Observable<any>{
     return this.http.get(`${environment.apiUrl}/admin/offers`)
   }
+  ApporveJob(id:any):Observable<any>{
+    return this.http.get(`${environment.apiUrl}/jobs/approve?id=${id}`)
+
+  }
+  DisapporveJob(id:any):Observable<any>{
+    return this.http.get(`${environment.apiUrl}/jobs/dispprove?id=${id}`)
+
+  }
 }

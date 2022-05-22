@@ -37,7 +37,8 @@ import { ListComponent } from './admin/job/list/list.component'
 import { ListCompaniesComponent } from './admin/list-companies/list-companies.component'
 ;
 import { ListJobsComponent } from './admin/list-jobs/list-jobs.component'
-
+;
+import { JobDetailComponent } from './job-detail/job-detail.component'
 
 
 
@@ -68,7 +69,11 @@ import { ListJobsComponent } from './admin/list-jobs/list-jobs.component'
         AddComponent ,
         ListCompaniesComponent,
         ListJobsComponent,
-        ListComponent],
+        ListComponent,
+    
+        JobDetailComponent,
+    
+    ],
        
         
       
