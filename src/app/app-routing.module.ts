@@ -31,7 +31,7 @@ const routes: Routes = [
 
     ] },
     { path: 'job/:id', component: JobDetailComponent },
-    {path:'application/:id',component:ApplicationComponent},
+    {path:'application/:id',canActivate:[AuthGuard],component:ApplicationComponent},
 
 
     

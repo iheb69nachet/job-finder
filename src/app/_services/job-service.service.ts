@@ -29,9 +29,17 @@ export class JobServiceService {
 
   }
   getJobById(id:any){
-    return this.http.get(`${environment.apiUrl}/detail/`+id)
+    return this.http.get(`${environment.apiUrl}/jobs/detail?id=`+id)
   }
   deletejobs(id:any){
     return this.http.delete(`${environment.apiUrl}/deletejob/`+id)
+  }
+  apply(data:any){
+    return this.http.post(`${environment.apiUrl}/jobs/apply`,data)
+
+  }
+  ViewApplies(id:any){
+    return this.http.get(`${environment.apiUrl}/jobs/applies?id=`+id)
+
   }
 }

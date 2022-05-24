@@ -40,6 +40,8 @@ import { ListJobsComponent } from './admin/list-jobs/list-jobs.component'
 ;
 import { JobDetailComponent } from './job-detail/job-detail.component'
 
+import { FormsModule } from '@angular/forms';
+import { ApplicationComponent } from './application/application.component';
 
 
 
@@ -49,7 +51,7 @@ import { JobDetailComponent } from './job-detail/job-detail.component'
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        
+        FormsModule,
     ],
     declarations: [
         AppComponent,
@@ -71,6 +73,7 @@ import { JobDetailComponent } from './job-detail/job-detail.component'
         ListComponent,
         JobDetailComponent,
     
+        ApplicationComponent
     ],
        
         

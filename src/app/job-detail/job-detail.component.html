@@ -30,8 +30,8 @@
                                     <h4></h4>
                                 </a>
                                 <ul>
-                                    <li>Creative Agency</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
+                                    <li>{{jobs.CompanyID.CompanyName}}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>{{jobs.CompanyID.CompanyAddress}}</li>
                                     <li>$3500 - $4000</li>
                                 </ul>
                             </div>
@@ -53,7 +53,8 @@
                                 <h4>Required Qualifications</h4>
                             </div>
                            <ul>
-                               <li>{{jobs.qualifications}}/li>
+                            <li *ngFor="let job of jobs.qualifications.split(',')">{{job}}</li>
+
                                
                            </ul>
                         </div>
@@ -63,7 +64,8 @@
                                 <h4>Education + Experience</h4>
                             </div>
                            <ul>
-                               <li>{{jobs.diplomaReq}}</li>
+
+                               <li *ngFor="let diploma of jobs.diplomaReq.split(',')">{{diploma}}</li>
                                
                            </ul>
                         </div>
@@ -93,12 +95,11 @@
                        <div class="small-section-tittle">
                            <h4>Company Information</h4>
                        </div>
-                          <span>Colorlib</span>
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                          <span>{{jobs.CompanyID.CompanyName}}</span>
                         <ul>
-                            <li>Name: <span>Colorlib </span></li>
-                            <li>Web : <span> colorlib.com</span></li>
-                            <li>Email: <span>carrier.colorlib@gmail.com</span></li>
+                            <li>Name: <span>{{jobs.CompanyID.CompanyName}} </span></li>
+                            <li>Email : <span> {{jobs.CompanyID.email}}</span></li>
+                            <li>Phone: <span>{{jobs.CompanyID.phone}}</span></li>
                         </ul>
                    </div>
                 </div>

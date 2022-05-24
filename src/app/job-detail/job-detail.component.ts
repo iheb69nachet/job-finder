@@ -15,13 +15,10 @@ export class JobDetailComponent implements OnInit {
   ngOnInit(): void {
     let id:number
     id=this.route.snapshot.params['id'];
-    this.service.getJobById(id).subscribe(res=>{
-     
-      
-      this.jobs=res})
-      console.log(id);
-      console.log(this.jobs);
-      
+    this.service.getJobById(id).subscribe((res:any)=>{
+      this.jobs=res.data
+    })
+   
    
   }
 

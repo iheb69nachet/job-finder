@@ -1,40 +1,71 @@
-<form role="form">
-    <div class="timeline-heading">
-      <div class="form-group">
-        <label for="title" >Name</label>
-        <input type="text" class="form-control" placeholder="Name" formControlName="name">
-      </div>
-    </div>
-    <div class="timeline-body">
-      <div class="form-group">
-        <label for="Text">Email</label>
-        <input class="form-control"  type="email" placeholder="email" rows="3" formControlName="email">
-      </div>
-    </div>
-    <div class="timeline-body">
-        <div class="form-group">
-          <label for="Text">Your CV</label>
-          <input class="form-control"   type="text" rows="3" formControlName="cv">
+<main >
+  <!-- Hero Area Start-->
+  <style>
+    body{
+      background-color: #F4F5F7 !important;
+    }
+  </style>
+  <div class="slider-area ">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>Apply for job</h2>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    <div class="timeline-body">
-      <div class="form-group">
-        <label for="Text">Upload your CV</label>
-        <input class="form-control"   type="file" rows="3" formControlName="cv">
-      </div>
     </div>
-    <div class="timeline-body">
-      <div class="form-group">
-        <label for="Text">Write a Motivation Letter</label>
-        <textarea class="form-control"  placeholder="text" rows="3" formControlName="write your motivation letter here"></textarea>
-      </div>
     </div>
-    
-   
-   
+    <!-- Hero Area End -->
+    <div class="job-post-company pt-120 pb-120" >
+      <div class="container" >
+          <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card">
+              <form [formGroup]="apply" (ngSubmit)="submit()">
+                <div class="timeline-heading">
+                  <div class="form-group">
+                    <label for="title" >Name</label>
+                    <input type="text" class="form-control"  value="{{user.firstName}} {{user.lastName}}" placeholder="Name" readonly>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <div class="form-group">
+                    <label for="Text">Email</label>
+                    <input class="form-control"  type="email" value="{{user.email}}" placeholder="email" rows="3"  readonly>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <div class="form-group">
+                    <label for="Text">Upload your CV</label>
+                    <input class="form-control"   type="file" rows="3" formControlName="cv"   (change)="onFileChange($event)">
+                    <div *ngIf="f.cv.touched && f.cv.invalid" class="alert alert-danger">
+                        <div *ngIf="f.cv.errors.required">File is required.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <div class="form-group">
+                    <label for="Text">Write a Motivation Letter</label>
+                    <textarea class="form-control"  rows="3" formControlName="motivation" placeholder="write your motivation letter here"></textarea>
+                  </div>
+                </div>
+                
+              
+              
+            
+                
+                  <br />
+                  <br />
+                  <button type="submit" class="btn btn-success btn-lg btn-block" >Apply</button>
+              </form>  
+             
+            </div>
+          </div>
+        </div>
 
-    
-      <br />
-      <br />
-      <button type="submit" class="btn btn-success btn-lg btn-block" >Apply</button>
-  </form>  
+      </div>
+  </div>
+</main>

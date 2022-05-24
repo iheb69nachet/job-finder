@@ -27,5 +27,11 @@ export class ListComponent implements OnInit {
     window.location.reload()
    )
   }
+  applies(id:any){
+    this.jobService.ViewApplies(id).subscribe(res=>{
+      console.log(res);
+      
+    })
+  }
 
 }
