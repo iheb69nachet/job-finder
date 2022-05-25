@@ -33,7 +33,7 @@
                 <td class="text-danger">{{j.jobtypes}}<i class="ti-arrow-down"></i></td>
                 <td><label class="badge badge-danger">{{j.status}}</label></td>
                 <td>
-                  <button (click)="applies(j._id)" type="button" class="btn btn-primary mr-2">Applies</button>
+                  <button (click)="applies(j._id)" type="button" class="btn btn-primary mr-2" routerLink="/admin/application/list/{{j._id}}">Applies</button>
                   <button (click)="delete(j._id)" type="button" class="btn btn-primary mr-2">Delete</button>
                 </td>
               </tr>

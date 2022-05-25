@@ -1,0 +1,49 @@
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Category List</h4>
+        <p class="card-description">
+           <code>Category List </code>
+        </p>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Action</th>
+
+
+              </tr>
+            </thead>
+            
+            <tbody>
+              
+              <tr *ngFor="let c of categories">
+                
+                
+                  <td>{{c.name}}</td>
+                
+               
+                <td>
+                  
+
+                  <button type="button" class="btn btn-primary" routerLink="/admin/updateCat/{{c.id}}">Update </button>
+                  <button (click)="deleteCat(c._id)" type="button" class="btn btn-primary mr-2">Delete</button>
+                  
+                </td>
+                
+              </tr>
+            
+            
+              
+            
+              
+             
+              
+            </tbody>
+          
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

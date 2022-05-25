@@ -37,6 +37,7 @@
                   <button *ngIf="j.status=='Pending' || j.status=='Disapproved'" type="button" class="btn btn-primary" (click)="approve(j._id)">Approve</button>
 
                   <button *ngIf="j.status=='Approved' " type="button" class="btn btn-primary" (click)="Disapporve(j._id)" >Disapprove</button>
+                  <button (click)="delete(j._id)" type="button" class="btn btn-primary mr-2">Delete</button>
                 </td>
               </tr>
               

@@ -1,0 +1,11 @@
+<form (ngSubmit)="update()" #form="ngForm"  >
+    <div class="form-group">
+
+        <label for="name" style="color: lavenderblush;">Name</label>
+        <input class="form-control" ngModel [(ngModel)]="cat.name" type="text" style="width:400px;" 
+        name="name" required #name="ngModel">
+        <span style=color:red *ngIf="!name.valid && name.touched"> Invalid Name!</span>
+    </div>
+    <button  class="btn btn-success" [disabled]=!form.valid>Update</button>
+</form>
+

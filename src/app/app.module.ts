@@ -41,7 +41,17 @@ import { ListJobsComponent } from './admin/list-jobs/list-jobs.component'
 import { JobDetailComponent } from './job-detail/job-detail.component'
 
 import { FormsModule } from '@angular/forms';
-import { ApplicationComponent } from './application/application.component';
+import { ApplicationComponent } from './application/application.component';;
+import { AppliesListComponent } from './application/applies-list/applies-list.component'
+;
+import { ProfileCompanyComponent } from './profile-company/profile-company.component'
+;
+import { AddCatComponent } from './admin/category/add-cat/add-cat.component'
+;
+
+import { CommonModule } from '@angular/common';
+import { CategoryComponent } from './admin/category/category/category.component';
+import {UpdateCatComponent} from './admin/category/update-cat/update-cat.component'
 
 
 
@@ -52,6 +62,7 @@ import { ApplicationComponent } from './application/application.component';
         HttpClientModule,
         AppRoutingModule,
         FormsModule,
+        CommonModule
     ],
     declarations: [
         AppComponent,
@@ -72,8 +83,14 @@ import { ApplicationComponent } from './application/application.component';
         ListJobsComponent,
         ListComponent,
         JobDetailComponent,
-    
-        ApplicationComponent
+        ApplicationComponent,
+        AppliesListComponent,
+        ProfileCompanyComponent,
+        AddCatComponent,
+        CategoryComponent,
+        UpdateCatComponent
+        
+          
     ],
        
         

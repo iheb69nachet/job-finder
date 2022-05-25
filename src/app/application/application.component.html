@@ -40,7 +40,7 @@
                 <div class="timeline-body">
                   <div class="form-group">
                     <label for="Text">Upload your CV</label>
-                    <input class="form-control"   type="file" rows="3" formControlName="cv"   (change)="onFileChange($event)">
+                    <input class="form-control"   type="file" rows="3" formControlName="cv"  (change)="onFileChange($event)">
                     <div *ngIf="f.cv.touched && f.cv.invalid" class="alert alert-danger">
                         <div *ngIf="f.cv.errors.required">File is required.</div>
                     </div>

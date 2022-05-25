@@ -64,6 +64,16 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label for="lastName">Website</label>
+                                            <input [ngClass]="{ 'is-invalid': submitted && f.website.errors }" type="text" formControlName="website" class="form-control"  />
+                                            <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+                                                <div >website is required</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label for="password">Password</label>
                                             <input [ngClass]="{ 'is-invalid': submitted && f.password.errors }" type="password" formControlName="password" class="form-control"  />
                                             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">

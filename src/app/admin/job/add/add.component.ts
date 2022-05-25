@@ -26,6 +26,7 @@ export class AddComponent implements OnInit {
       technologiesReq: ['', Validators.required],
       diplomaReq: ['', Validators.required ],
       jobtypes: ['', Validators.required],
+      localisation:['',Validators.required]
 
   });
   }

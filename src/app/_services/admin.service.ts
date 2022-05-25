@@ -26,4 +26,19 @@ export class AdminService {
     return this.http.get(`${environment.apiUrl}/jobs/dispprove?id=${id}`)
 
   }
+  addCat(data:any){
+    return this.http.post(`${environment.apiUrl}/admin/category`,data)
+  }
+  getAllCat(){
+    return this.http.get(`${environment.apiUrl}/admin/getallCat`)
+  }
+  deleteCat(id:any){
+    return this.http.delete(`${environment.apiUrl}/admin/deleteCat/`+id)
+  }
+  updateCat(id:any,d:any){
+    return this.http.put(`${environment.apiUrl}/admin/updateCat/`+id,d)
+  }
+  getCatId(id:any){
+    return this.http.get(`${environment.apiUrl}/admin/catById`+id)
+  }
 }

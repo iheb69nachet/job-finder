@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '@app/_models';
 import { AdminService } from '@app/_services/admin.service';
+import { JobServiceService } from '@app/_services/job-service.service';
 import Swal from 'sweetalert2/dist/sweetalert2.js';  
 
 @Component({
@@ -13,7 +14,7 @@ export class ListJobsComponent implements OnInit {
    company:Array<Object>
    user:User[]
 
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService, private jobService:JobServiceService) { }
 
   ngOnInit(): void {
     this.adminService.GetJobs().subscribe(res=>{
@@ -43,6 +44,11 @@ export class ListJobsComponent implements OnInit {
         
       }) 
     })
+  }
+  delete(id:any){
+    this.jobService.deletejobsAd(id).subscribe(()=>
+    window.location.reload()
+   )
   }
 
 }

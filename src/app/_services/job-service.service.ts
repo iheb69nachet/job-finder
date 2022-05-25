@@ -32,7 +32,10 @@ export class JobServiceService {
     return this.http.get(`${environment.apiUrl}/jobs/detail?id=`+id)
   }
   deletejobs(id:any){
-    return this.http.delete(`${environment.apiUrl}/deletejob/`+id)
+    return this.http.delete(`${environment.apiUrl}/jobs/deletejob/`+id)
+  }
+  deletejobsAd(id:any){
+    return this.http.delete(`${environment.apiUrl}/jobs/deletejobAd/`+id)
   }
   apply(data:any){
     return this.http.post(`${environment.apiUrl}/jobs/apply`,data)
@@ -42,4 +45,12 @@ export class JobServiceService {
     return this.http.get(`${environment.apiUrl}/jobs/applies?id=`+id)
 
   }
+  ApplyById(id:any){
+    return this.http.get(`${environment.apiUrl}/jobs/appPerpost?=id=`+id)
+  }
+  getApplications(){
+    return this.http.get(`${environment.apiUrl}/jobs/applications`)
+  }
+  
+  
 }

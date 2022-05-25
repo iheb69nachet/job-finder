@@ -42,6 +42,22 @@
         </div>
         
       </li>
+      <li class="nav-item" *ngIf="currentUser.role=='admin'">
+        <a class="nav-link" data-bs-toggle="collapse" href="#cat" aria-expanded="false" aria-controls="jobs">ca
+          <i class="menu-icon mdi mdi-account-circle-outline"></i>
+          <span class="menu-title">Categories</span>
+          <i class="menu-arrow"></i>
+        </a>
+        
+        <div class="collapse" id="cat">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" routerLink="/admin/cat"> Add Categorie</a></li>
+            <li class="nav-item"><a class="nav-link" href="/admin/getAllCat">Category List</a></li>
+
+          </ul>
+        </div>
+        
+      </li>
    
       <li class="nav-item nav-category" *ngIf="currentUser.role=='company'">Jobs</li>
       <li class="nav-item" *ngIf="currentUser.role=='company'">

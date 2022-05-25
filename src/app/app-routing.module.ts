@@ -14,6 +14,12 @@ import { ListCompaniesComponent } from './admin/list-companies/list-companies.co
 import { ListJobsComponent } from './admin/list-jobs/list-jobs.component';
 import { JobDetailComponent } from './job-detail/job-detail.component';
 import { ApplicationComponent } from './application/application.component';
+import { AppliesListComponent } from './application/applies-list/applies-list.component';
+import { ProfileCompanyComponent } from './profile-company/profile-company.component';
+import { AddCatComponent } from './admin/category/add-cat/add-cat.component';
+import { CategoryComponent } from './admin/category/category/category.component';
+import { CommonModule } from '@angular/common';
+import { UpdateCatComponent } from './admin/category/update-cat/update-cat.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -23,15 +29,21 @@ const routes: Routes = [
         { path: 'home', component: AdminhomeComponent},
         { path: 'Candidates/list', component:ListCandidatesComponent},
         {path: 'Companies/list',component: ListCompaniesComponent},
-        {path:'offers/list', component:ListJobsComponent},
-        { path: 'job/add', component:AddComponent},
-        { path: 'job/list', component:ListComponent},
+        {path:'offers/list',component:ListJobsComponent},
+        { path: 'job/add',component:AddComponent},
+        { path: 'job/list',component:ListComponent},
+        {path:'application/list/:id',component:AppliesListComponent},
+        {path:'profile',component:ProfileCompanyComponent},
+        {path:'cat',component:AddCatComponent},
+        {path:'getAllCat',component:CategoryComponent},
+        
 
 
 
     ] },
-    { path: 'job/:id', component: JobDetailComponent },
+    {path: 'job/:id', component: JobDetailComponent },
     {path:'application/:id',canActivate:[AuthGuard],component:ApplicationComponent},
+    {path:'updatCat/:id',component:UpdateCatComponent},
 
 
     
