@@ -21,5 +21,7 @@ export class UserService {
         }
       }
 
-    
+    DisproveApp(id:any):Observable<any>{
+      return this.http.get(`${environment.apiUrl}/jobs/dispproveApp?id=${id}`)
+    }
 }

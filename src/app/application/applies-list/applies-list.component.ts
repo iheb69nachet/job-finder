@@ -34,5 +34,14 @@ export class AppliesListComponent implements OnInit {
     })
 
   }
+  Disapporve(id){
+    this.user.DisproveApp(id).subscribe(res=>{
+      Swal.fire('Dissproved', res.message, 'success') 
+      this.service.ViewApplies(id).subscribe((res:any)=>{
+        this.applications=res.data
+        
+      }) 
+    })
+  }
 
 }

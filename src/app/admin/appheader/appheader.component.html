@@ -8,7 +8,7 @@
       </div>
       <div>
         <a class="navbar-brand brand-logo" href="index.html">
-          <img src="/assets/admin/images/logo.svg" alt="logo" />
+          
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
           <img src="/assets/admin/images/logo-mini.svg" alt="logo" />
@@ -28,9 +28,9 @@
               <p class="mb-1 mt-3 font-weight-semibold">{{currentUser.username}}</p>
               <p class="fw-light text-muted mb-0">{{currentUser.email}}</p>
             </div>
-            <a class="dropdown-item" routerLink=" " ><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Home</a>
-            <a class="dropdown-item" routerLink="/admin/profile" >Profile</a>
-            <a class="dropdown-item" (click)="logout()"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+            <a class="dropdown-item" routerLink=" " ><i class="fa fa-home" style="font-size:20px;color:black"></i>Home</a>
+            <a class="dropdown-item" routerLink="/admin/profile"><i class="far fa-user"></i>Profile</a>
+            <a class="dropdown-item" (click)="logout()"><i class="fas fa-coffee"></i>Sign Out</a>
           </div>
         </li>
       </ul>

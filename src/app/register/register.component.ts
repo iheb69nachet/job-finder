@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '@app/_services';
 import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
  
 
 @Component({
@@ -87,6 +88,7 @@ export class RegisterComponent implements OnInit {
     this.authenticationService.register(this.data)
         .subscribe(
             data => {
+              
 
                 this.router.navigate(["/"]);
             },
@@ -110,6 +112,8 @@ onSubmitComany(){
     this.authenticationService.registerCompany(this.data)
         .subscribe(
             data => {
+              Swal.fire('Registred', 'success') 
+              
               this.router.navigate(["/"]);
 
             },
