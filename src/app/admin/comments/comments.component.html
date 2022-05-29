@@ -1,0 +1,41 @@
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Comments</h4>
+        <p class="card-description">
+           <code>Comments</code>
+        </p>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+
+
+                <th>Content</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let j of comments">
+                <td>{{j.Content}}</td>
+                <td>{{j.createdAt}}</td>
+
+                <td>
+                
+                  <button  type="button" class="btn btn-primary mr-2" *ngIf="j.status=='Pending' || j.status=='Disapproved'" (click)="action('approve',j._id)">Approve</button>
+                  <button  type="button" class="btn btn-primary mr-2" *ngIf="j.status=='Pending' || j.status=='Approved'" (click)="action('disaprove',j._id)">Disapprove</button>
+                  <button (click)="delete(j._id)" type="button" class="btn btn-primary mr-2" (click)="delete(j._id)">Delete</button>
+                </td>
+              </tr>
+              
+            
+              
+             
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -104,6 +104,40 @@
                    </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="be-comment-block">
+                    <h1 class="comments-title">Comments ({{comments.length}})</h1>
+                    <div class="be-comment" *ngFor="let comment of comments">
+                    
+                        <div class="be-comment-content">
+                            
+                                <span class="be-comment-name">
+                                    <a href="blog-detail-2.html">{{comment.UserID.username || comment.UserID.CompanyName}}</a>
+                                    </span>
+                                <span class="be-comment-time">
+                                    <i class="fa fa-clock-o"></i>
+                                    {{comment.createdAt}}
+                                </span>
+                
+                            <p class="be-comment-text">
+                                {{comment.Content}}
+                            </p>
+                        </div>
+                    </div>
+                  
+                        <div class="row">
+                          
+                            <div class="col-md-12">									
+                                <div class="form-group">
+                                    <textarea class="form-input" [(ngModel)]="comment" name="first"  placeholder="Your text"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">									
+                                <button class="btn btn-primary float-right" (click)="getComment()">submit</button>
+                            </div>
+                        </div>
+                </div>
+                </div>
         </div>
     </div>
     <!-- job post company End -->

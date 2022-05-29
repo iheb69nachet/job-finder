@@ -36,7 +36,8 @@
 
                 <td>
                 
-                  <button (click)="applies(j._id)" type="button" class="btn btn-primary mr-2" routerLink="/admin/application/list/{{j._id}}">Applies</button>
+                  <button  type="button" class="btn btn-primary mr-2" routerLink="/admin/application/list/{{j._id}}">Applies</button>
+                  <button  type="button" class="btn btn-primary mr-2" routerLink="/admin/comments/{{j._id}}">Comments</button>
                   <button (click)="delete(j._id)" type="button" class="btn btn-primary mr-2">Delete</button>
                 </td>
               </tr>

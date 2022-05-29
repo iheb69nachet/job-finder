@@ -51,6 +51,19 @@ export class JobServiceService {
   getApplications(){
     return this.http.get(`${environment.apiUrl}/jobs/applications`)
   }
-  
-  
+  PostComment(data){
+    return this.http.post(`${environment.apiUrl}/jobs/comment`,data)
+
+  }
+  Comments(id){
+    return this.http.get(`${environment.apiUrl}/jobs/comments?id=${id}`)
+  }
+  UpdateCommentStatus(data){
+    return this.http.post(`${environment.apiUrl}/jobs/comment/actions`,data)
+
+  }
+  DeleteComment(id){
+    return this.http.get(`${environment.apiUrl}/jobs/comment/delete?id=${id}`)
+
+  }
 }

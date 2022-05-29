@@ -20,6 +20,7 @@ export class AppliesListComponent implements OnInit {
     id=this.ar.snapshot.params['id'];
     this.service.ViewApplies(id).subscribe((res:any)=>{
       this.applications=res.data
+      console.log(this.applications)
     })
    
   }

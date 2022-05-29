@@ -16,14 +16,20 @@ export class UpdateCatComponent implements OnInit {
   ngOnInit(): void {
     this.ar.paramMap.subscribe((params:Params)=>{
       this.id=params['get']('id')
-      this.service.getCatId(this.id).subscribe(data=>{
-        this.cat=data
+      this.service.getCatId(this.id).subscribe((data:any)=>{
+        console.log(data);
+        
+        this.cat=data.data
         
       })
     })
   }
   update(){
-    this.service.updateCat(this.id,this.cat).subscribe(()=>this.router.navigate(['/admin/getAllCat']))
+    let data={
+      id:this.id,
+      cat:this.cat
+    }
+    this.service.updateCat(data).subscribe(()=>this.router.navigate(['/admin/getAllCat']))
 
   }
 

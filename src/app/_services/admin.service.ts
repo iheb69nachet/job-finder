@@ -35,10 +35,10 @@ export class AdminService {
   deleteCat(id:any){
     return this.http.delete(`${environment.apiUrl}/admin/deleteCat/`+id)
   }
-  updateCat(id:any,d:any){
-    return this.http.put(`${environment.apiUrl}/admin/updateCat/`+id,d)
+  updateCat(data){
+    return this.http.post(`${environment.apiUrl}/admin/updateCat`,data)
   }
   getCatId(id:any){
-    return this.http.get(`${environment.apiUrl}/admin/catById`+id)
+    return this.http.get(`${environment.apiUrl}/admin/catById/`+id)
   }
 }

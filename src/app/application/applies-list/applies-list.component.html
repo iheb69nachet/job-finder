@@ -19,9 +19,9 @@
             </thead>
             <tbody *ngFor="let a of applications">
               <tr>
-                <td>{{a.user_id.email}}</td>
-                <td> </td>
-                <td><a href="http://localhost:3000/{{a.file_path}}">{{a.file_path}}</a></td>
+                <td>{{a.user_id.fullName}}</td>
+                <td> {{a.user_id.email}}</td>
+                <td><a target="_blank" href="http://localhost:3000/{{a.file_path}}">{{a.file_path}}</a></td>
                 <td>{{a.motivation}}</td>
                 
               

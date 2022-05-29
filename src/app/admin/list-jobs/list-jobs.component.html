@@ -34,9 +34,10 @@
                 <td>{{j.diplomaReq}}</td>
                 <td class="text-danger">{{j.jobtypes}}<i class="ti-arrow-down"></i></td>
                 <td >
-                  <button *ngIf="j.status=='Pending' || j.status=='Disapproved'" type="button" class="btn btn-primary" (click)="approve(j._id)">Approve</button>
-
-                  <button *ngIf="j.status=='Approved' " type="button" class="btn btn-primary" (click)="Disapporve(j._id)" >Disapprove</button>
+                  <button *ngIf="j.status=='Pending' || j.status=='Disapproved'" type="button" class="btn btn-primary mr-2" (click)="approve(j._id)">Approve</button>
+                  
+                  <button *ngIf="j.status=='Approved' " type="button" class="btn btn-primary mr-2" (click)="Disapporve(j._id)" >Disapprove</button>
+                  <button  type="button" class="btn btn-primary mr-2" routerLink="/admin/comments/{{j._id}}">Comments</button>
                   <button (click)="delete(j._id)" type="button" class="btn btn-primary mr-2">Delete</button>
                 </td>
               </tr>

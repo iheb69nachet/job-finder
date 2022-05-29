@@ -52,7 +52,8 @@ import { AddCatComponent } from './admin/category/add-cat/add-cat.component'
 import { CommonModule } from '@angular/common';
 import { CategoryComponent } from './admin/category/category/category.component';
 import {UpdateCatComponent} from './admin/category/update-cat/update-cat.component'
-
+;
+import { CommentsComponent } from './admin/comments/comments.component'
 
 
 @NgModule({
@@ -88,8 +89,8 @@ import {UpdateCatComponent} from './admin/category/update-cat/update-cat.compone
         ProfileCompanyComponent,
         AddCatComponent,
         CategoryComponent,
-        UpdateCatComponent
-        
+        UpdateCatComponent,
+        CommentsComponent        
           
     ],
        

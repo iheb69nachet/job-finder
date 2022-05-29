@@ -1,6 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '@app/_services';
+import { AuthenticationService, UserService } from '@app/_services';
 
 @Component({
   selector: 'app-profile-company',
@@ -10,11 +10,15 @@ import { UserService } from '@app/_services';
 export class ProfileCompanyComponent implements OnInit {
   profileinfo:any
 
-  constructor(private service:UserService, private inject:Injector,private router:Router) { }
+  constructor(private service:AuthenticationService, private inject:Injector,private router:Router) { }
 
   ngOnInit(): void {
     
-      this.profileinfo=this.service.getUserData()
+      this.profileinfo=this.service.currentUserValue
+
+
+      console.log(this.profileinfo);
+      
       if(!this.profileinfo){
         this.router.navigateByUrl('/admin/login')
       }

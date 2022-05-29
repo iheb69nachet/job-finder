@@ -20,6 +20,7 @@ import { AddCatComponent } from './admin/category/add-cat/add-cat.component';
 import { CategoryComponent } from './admin/category/category/category.component';
 import { CommonModule } from '@angular/common';
 import { UpdateCatComponent } from './admin/category/update-cat/update-cat.component';
+import { CommentsComponent } from './admin/comments/comments.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -33,9 +34,12 @@ const routes: Routes = [
         { path: 'job/add',component:AddComponent},
         { path: 'job/list',component:ListComponent},
         {path:'application/list/:id',component:AppliesListComponent},
+        {path:'comments/:id',component:CommentsComponent},
+
         {path:'profile',component:ProfileCompanyComponent},
         {path:'cat',component:AddCatComponent},
         {path:'getAllCat',component:CategoryComponent},
+        {path:'updatCat/:id',component:UpdateCatComponent},
         
 
 
@@ -43,7 +47,6 @@ const routes: Routes = [
     ] },
     {path: 'job/:id', component: JobDetailComponent },
     {path:'application/:id',canActivate:[AuthGuard],component:ApplicationComponent},
-    {path:'updatCat/:id',component:UpdateCatComponent},
 
 
     
@@ -57,7 +60,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes,{
+       
+            // Restore the last scroll position
+            scrollPositionRestoration: "enabled",
+            scrollOffset: [0, 0],
+            // Enable scrolling to anchors
+            anchorScrolling: "enabled",
+          }
+    )],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
