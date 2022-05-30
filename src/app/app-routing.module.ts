@@ -23,6 +23,8 @@ import { UpdateCatComponent } from './admin/category/update-cat/update-cat.compo
 import { CommentsComponent } from './admin/comments/comments.component';
 import { ProfilCandidatComponent } from './profil-candidat/profil-candidat.component';
 import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component';
+import { UpdateJobComponent } from './admin/job/update-job/update-job.component';
+import { AppListComponent } from './admin/app-list/app-list.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -37,6 +39,8 @@ const routes: Routes = [
         { path: 'job/list',component:ListComponent},
         {path:'application/list/:id',component:AppliesListComponent},
         {path:'comments/:id',component:CommentsComponent},
+        {path:'updateAd/:id',component:UpdateJobComponent},
+        {path:'appList/:id',component:AppListComponent},
 
         {path:'profile',component:ProfileCompanyComponent},
         {path:'cat',component:AddCatComponent},

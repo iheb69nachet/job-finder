@@ -1,0 +1,49 @@
+
+
+<form (ngSubmit)="update()" #form="ngForm">
+    <div class="form-group">
+        
+        <label for="name" style="color: rgb(20, 20, 20);" >Title</label>
+        <input class="form-control"  [(ngModel)]="jobs.title" type="text" style="width:400px;" 
+        ngModel name="title" required #title="ngModel">
+        <span style=color:red *ngIf="!title.valid && title.touched"> Invalid title!</span>
+        <br>
+        <label for="description" style="color: rgb(20, 19, 19);">Description</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.description" type="text" style="width:400px;" 
+        name="description" required #description="ngModel">
+        <span style=color:red *ngIf="!description.valid && description.touched"> Invalid description!</span>
+        <br>
+        <label for="placesAvailable" style="color: rgb(17, 16, 17);">Places Available</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.placesAvailable" type="text" style="width:400px;" 
+        name="plavesAvailable" required #placesAvailable="ngModel">
+        <span style=color:red *ngIf="!placesAvailable.valid && placesAvailable.touched"> Invalid Places Available!</span>
+        <br>
+        <label for="qualificcations" style="color: rgb(13, 13, 13);">Qualifications</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.qualifications" type="text" style="width:400px;" 
+        name="qualifications" required #qualifications="ngModel">
+        <span style=color:red *ngIf="!qualifications.valid && qualifications.touched"> Invalid Qualifications!</span>
+        <br>
+        <label for="technologiesReq" style="color: rgb(15, 15, 15);">Technologies Required</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.technologiesReq" type="text" style="width:400px;" 
+        name="technologiesReq" required #technologiesReq="ngModel">
+        <span style=color:red *ngIf="!technologiesReq.valid && technologiesReq.touched"> Invalid Technologies Required!</span>
+        <br>
+        <label for="diplomaReq" style="color: rgb(18, 17, 17);">Diploma Required</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.diplomaReq" type="text" style="width:400px;" 
+        name="diplomaReq" required #diplomaReq="ngModel">
+        <span style=color:red *ngIf="!diplomaReq.valid && diplomaReq.touched"> Invalid Diploma Required!</span>
+        <br>
+        <label for="jobtypes" style="color: rgb(23, 21, 22);">Job Type</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.jobtypes" type="text" style="width:400px;" 
+        name="name" required #jobtypes="ngModel">
+        <span style=color:red *ngIf="!jobtypes.valid && jobtypes.touched"> Invalid Job Type!</span>
+        <br>
+        <label for="localisation" style="color: rgb(20, 20, 20);">Localisation</label>
+        <input class="form-control" ngModel [(ngModel)]="jobs.localisation" type="text" style="width:400px;" 
+        name="localisation" required #localisation="ngModel">
+        <span style=color:red *ngIf="!localisation.valid && localisation.touched"> Invalid Name!</span>
+      
+    </div>
+    <button  class="btn btn-success" [disabled]=!form.valid>Update</button>
+</form>
+

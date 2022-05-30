@@ -12,7 +12,7 @@ export class CategoryComponent implements OnInit {
   constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
-    this.adminService.getAllCat() .subscribe(
+    this.adminService.getAllCat().subscribe(
       (data:any) => {
         this.categories=data.data;
         console.table(this.categories)

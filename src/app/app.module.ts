@@ -53,12 +53,18 @@ import { CommonModule } from '@angular/common';
 import { CategoryComponent } from './admin/category/category/category.component';
 import {UpdateCatComponent} from './admin/category/update-cat/update-cat.component'
 ;
-import { CommentsComponent } from './admin/comments/comments.component';
+import { CommentsComponent } from './admin/comments/comments.component'
+;
 import { ProfilCandidatComponent } from './profil-candidat/profil-candidat.component'
 ;
-import { AsideComponent } from './profil-candidat/aside/aside.component';
+import { AsideComponent } from './profil-candidat/aside/aside.component'
+;
 import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component'
-
+;
+import { UpdateJobComponent } from './admin/job/update-job/update-job.component'
+;
+import { AppListComponent } from './admin/app-list/app-list.component';
+import { CandidacyComponent } from './profil-candidat/candidacy/candidacy.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -96,7 +102,10 @@ import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component
         CommentsComponent ,
         ProfilCandidatComponent ,
         AsideComponent ,
-        WishlistComponent     
+        WishlistComponent ,
+        UpdateJobComponent ,
+        AppListComponent ,
+        CandidacyComponent  
           
     ],
        

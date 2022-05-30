@@ -38,14 +38,11 @@
                                     <a  class="btn head-btn1" routerLink="register">Register</a>
                                     <a  class="btn head-btn2" routerLink="login">Login</a>
                                 </div>
-                                <div class="header-btn d-none f-right d-lg-block" *ngIf="currentUser.role=='condidate'">
+                                <div class="header-btn d-none f-right d-lg-block" *ngIf="currentUser">
                                     <a  class="btn head-btn1" routerLink="/profile">Profile</a>
                                     <a  class="btn head-btn2" (click)="logout()">Logout</a>
                                 </div>
-                                <div class="header-btn d-none f-right d-lg-block" *ngIf="currentUser.role=='company'">
-                                    <a  class="btn head-btn1" routerLink="/admin/profile">Profile</a>
-                                    <a  class="btn head-btn2" (click)="logout()">Logout</a>
-                                </div>
+                                
                             </div>
                         </div>
                         <!-- Mobile Menu -->

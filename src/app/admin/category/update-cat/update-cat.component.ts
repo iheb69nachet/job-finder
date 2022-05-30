@@ -8,6 +8,7 @@ import { AdminService } from '@app/_services/admin.service';
   styleUrls: ['./update-cat.component.less']
 })
 export class UpdateCatComponent implements OnInit {
+  name: any;
 
   constructor( private ar:ActivatedRoute,private service:AdminService, private router:Router) { }
   cat:any

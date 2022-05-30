@@ -41,4 +41,14 @@ export class AdminService {
   getCatId(id:any){
     return this.http.get(`${environment.apiUrl}/admin/catById/`+id)
   }
+  updatejob(id:any,data:any){
+    return this.http.put(`${environment.apiUrl}/jobs/updatejobAd/`+id,data)
+  }
+  ViewApplies(id:any){
+    return this.http.get(`${environment.apiUrl}/jobs/applications?id=`+id)
+
+  }
+  deleteCan(id:any){
+    return this.http.delete(`${environment.apiUrl}/admin/deletecan/`+id)
+  }
 }
