@@ -21,6 +21,8 @@ import { CategoryComponent } from './admin/category/category/category.component'
 import { CommonModule } from '@angular/common';
 import { UpdateCatComponent } from './admin/category/update-cat/update-cat.component';
 import { CommentsComponent } from './admin/comments/comments.component';
+import { ProfilCandidatComponent } from './profil-candidat/profil-candidat.component';
+import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -47,6 +49,8 @@ const routes: Routes = [
     ] },
     {path: 'job/:id', component: JobDetailComponent },
     {path:'application/:id',canActivate:[AuthGuard],component:ApplicationComponent},
+    {path:'profile',component:ProfilCandidatComponent},
+    {path:'wishlist',component:WishlistComponent},
 
 
     

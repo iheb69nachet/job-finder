@@ -53,8 +53,11 @@ import { CommonModule } from '@angular/common';
 import { CategoryComponent } from './admin/category/category/category.component';
 import {UpdateCatComponent} from './admin/category/update-cat/update-cat.component'
 ;
-import { CommentsComponent } from './admin/comments/comments.component'
-
+import { CommentsComponent } from './admin/comments/comments.component';
+import { ProfilCandidatComponent } from './profil-candidat/profil-candidat.component'
+;
+import { AsideComponent } from './profil-candidat/aside/aside.component';
+import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component'
 
 @NgModule({
     imports: [
@@ -90,7 +93,10 @@ import { CommentsComponent } from './admin/comments/comments.component'
         AddCatComponent,
         CategoryComponent,
         UpdateCatComponent,
-        CommentsComponent        
+        CommentsComponent ,
+        ProfilCandidatComponent ,
+        AsideComponent ,
+        WishlistComponent     
           
     ],
        
