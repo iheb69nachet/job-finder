@@ -11,13 +11,14 @@ export class CandidacyComponent implements OnInit {
 
   constructor(private user:UserService) { }
   apps:Array<Object>
+  app:any
 
   ngOnInit(): void {
     this.user.getApplications().
     subscribe(
       (data:any) => {
-        this.apps=data.data;
-        console.table(this.apps)
+        this.app=data.data;
+        console.table(this.app)
       },
       error => {
           console.log(error);
