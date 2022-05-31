@@ -203,7 +203,10 @@
                         </div>
                         <div class="items-link f-right">
                             <a [routerLink]="['/job',job.id]">{{job.jobtypes}}</a>
-                            <span><i class="fa fa-heart"></i></span>
+                            <span *ngIf="user && !favs.includes(job._id)" (click)="favorite(job._id)"><i class="fa fa-heart"></i></span>
+                            <span *ngIf="user && favs.includes(job._id)" (click)="Removefavorite(job._id)"><i class="fa fa-heart" style="color:red"></i></span>
+
+                            <!-- <span (click)="click($event)"><i class="fa fa-heart"></i></span> -->
                         </div>
                     </div>
                  

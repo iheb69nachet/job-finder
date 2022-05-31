@@ -66,4 +66,16 @@ export class JobServiceService {
     return this.http.get(`${environment.apiUrl}/jobs/comment/delete?id=${id}`)
 
   }
+  GetFavorites(){
+    return this.http.get(`${environment.apiUrl}/jobs/favorites`)
+
+  }
+  AddFavorites(data){
+    return this.http.post(`${environment.apiUrl}/jobs/favorites`,data)
+
+  }
+  DeleteFavorites(data){
+    return this.http.post(`${environment.apiUrl}/jobs/favorites/delete`,data)
+
+  }
 }
