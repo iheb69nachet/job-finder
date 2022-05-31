@@ -25,6 +25,8 @@ import { ProfilCandidatComponent } from './profil-candidat/profil-candidat.compo
 import { WishlistComponent } from './profil-candidat/wishlist/wishlist.component';
 import { UpdateJobComponent } from './admin/job/update-job/update-job.component';
 import { AppListComponent } from './admin/app-list/app-list.component';
+import { CandidacyComponent } from './profil-candidat/candidacy/candidacy.component';
+
 
 const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -55,6 +57,7 @@ const routes: Routes = [
     {path:'application/:id',canActivate:[AuthGuard],component:ApplicationComponent},
     {path:'profile',component:ProfilCandidatComponent},
     {path:'wishlist',component:WishlistComponent},
+    {path:'candidacy',component:CandidacyComponent},
 
 
     

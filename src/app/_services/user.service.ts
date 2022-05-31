@@ -25,6 +25,6 @@ export class UserService {
       return this.http.get(`${environment.apiUrl}/jobs/dispproveApp?id=${id}`)
     }
     getApplications(){
-      return this.http.get(`${environment.apiUrl}/jobs/getapp`)
+      return this.http.get(`${environment.apiUrl}/jobs/getapps`)
     }
 }
